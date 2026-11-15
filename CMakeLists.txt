@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 4.4)
+﻿cmake_minimum_required(VERSION 4.4)
 project(Ray_Tracer)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Ray_Tracer main.cpp)
+add_executable(Ray_Tracer src/main.cpp
+)
