@@ -42,3 +42,11 @@ Vector3D operator*(const Vector3D& vec1, double multiplier) {
      assert(divisor != 0);
      return Vector3D {vec1.m_xpos / divisor, vec1.m_ypos / divisor, vec1.m_zpos / divisor};
  };
+
+Vector3D operator*(const Vector3D& vec1, const Vector3D& vec2) {
+    return Vector3D {vec1.m_xpos*vec2.m_xpos,vec1.m_ypos*vec2.m_ypos, vec1.m_zpos*vec2.m_zpos};
+}
+
+Vector3D operator/(const Vector3D& vec1, const Vector3D& vec2) {
+    return Vector3D {vec1.m_xpos/vec2.m_xpos,vec1.m_ypos/vec2.m_ypos, vec1.m_zpos/vec2.m_zpos};
+}

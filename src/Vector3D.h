@@ -21,11 +21,19 @@ public:
     friend Vector3D operator+ (const Vector3D& vec1, const Vector3D& vec2);
     friend Vector3D operator-(const Vector3D& vec1, const Vector3D& vec2);
     friend Vector3D operator*(const Vector3D& vec1, double multiplier);
+    friend Vector3D operator*(const Vector3D& vec1, const Vector3D& vec2);
     friend Vector3D operator/(const Vector3D& vec1, double divisor);
+    friend Vector3D operator/(const Vector3D& vec1, const Vector3D& vec2);
+
 
     [[nodiscard]] double dotProduct(const Vector3D& vec2) const;
     [[nodiscard]] double getLength () const;
     [[nodiscard]] Vector3D normalisation()const;
+
+
+    [[nodiscard]] double get_xpos() const {return m_xpos;}
+    [[nodiscard]] double get_ypos() const {return m_ypos;}
+    [[nodiscard]] double get_zpos() const {return m_zpos;}
 
     Vector3D operator*=(double multiplier) {m_xpos *= multiplier, m_ypos *= multiplier, m_zpos *= multiplier; return *this;}
     Vector3D operator/=(double divisor) {m_xpos /= divisor, m_ypos /= divisor, m_zpos /= divisor; return *this;}
