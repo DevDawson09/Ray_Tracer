@@ -7,4 +7,5 @@ add_executable(Ray_Tracer src/main.cpp
         src/Vector3D.cpp
         src/Vector3D.h
         src/Ray.h
+        src/Sphere.h
 )
